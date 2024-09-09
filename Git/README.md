@@ -195,7 +195,7 @@ $\Downarrow$ 	`git commit / -am "tip"`		( -a  将==已追踪==的文件从 <img 
 
 
 
-###### <a id="message">-m</a>
+#### <a id="message">-m</a>
 
 > **开头**以一条简短的（≤50个字符）描述变化，
 >
@@ -205,11 +205,32 @@ $\Downarrow$ 	`git commit / -am "tip"`		( -a  将==已追踪==的文件从 <img 
 
 
 
+##### 查看内容
 
 
 
+###### 指定
+
+```bash
+git show <ID>
+```
+
+​	
+
+###### 所有
+
+```bash
+git log -p		#关注代码的的具体更改
+
+p - patch(补丁)
+```
 
 
+
+```bash
+git log --stat --summaty	#了解提交影响及其变化概括
+		  统计     摘要
+```
 
 
 
@@ -765,9 +786,7 @@ git pull <远程仓库名> < 远程分支名>:<本地分支名> --rebase
 
 
 
-### 只获取修改
 
-> git fetch		#并==不会自动合并==到本地仓库中
 
 
 
@@ -793,7 +812,7 @@ git push origin main -f
 
 ​	
 
-
+​	
 
 
 
@@ -830,8 +849,8 @@ git branch <branch_name>
 ```
 
 - e.g. 
-  - dev
-  - feat - feature (特点)   开发某一个功能
+  - dev - development(开发)    开发的**主分支**
+  - feat - feature (特点)          开发**特定功能**
 
 
 
@@ -929,6 +948,28 @@ git rebase Main			#当前 -> 目标分支
 
 
 
+### Fetch - 获取
+
+
+
+###### 获取更新
+
+```bash
+git fetch <URL> "Remote branch name"
+```
+
+- 并不会自动整合到**本地仓库**<img src="./images/harddisk.png" alt="harddisk" style="zoom: 25%;" />
+
+
+
+###### 比较差异
+
+```bash
+git log -p HEAD..FETCH_HEAD	  #比较本地仓库的HEAD 与 FETCH_HEAD 的内容
+```
+
+- `-p` 显示具体的**文件改动**(patch)
+
 
 
 ### 查看分支
@@ -955,7 +996,7 @@ git log --all --oneline --graph --decorate
 ### 回退
 
 ```bash
-git reset --hard <ID>
+git reset {--hard} <ID>
 	 回退
 ```
 
@@ -1045,3 +1086,16 @@ git merge --abort
 [Tutorial](https://git-scm.com/docs/gittutorial) -> [Everyday](https://git-scm.com/docs/giteveryday) -> [Documentation](https://git-scm.com/docs/git/en) -> [CLI](https://git-scm.com/docs/gitcli)
 
 > CLI	-	Command Line Interface	命令行界面
+
+
+
+
+
+
+
+*****
+
+
+
+
+
