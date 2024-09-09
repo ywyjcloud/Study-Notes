@@ -129,7 +129,7 @@ git clone <url>
 
 
 
-## **工作**区
+### **工作**区
 
 > <img src="./images/mac-pro.png" align="left" alt="mac-pro" style="zoom: 67%;" />Working Directory	
 >
@@ -141,11 +141,11 @@ git clone <url>
 
 $\Downarrow$	`git add <file> / *.txt / .` 			$\Uparrow$	`git rm --cached <file>`
 
-​									(.)所有更改		  	    remove   已缓存
+​			添加快照								  	     remove   已缓存
 
 
 
-## **暂存**区
+### **暂存**区
 
 ><img src="./images/2024-08-22_14-52-37-removebg-preview.png" alt="2024-08-22_14-52-37-removebg-preview" style="zoom: 25%;" />Staging Area / Index(索引)		一般**存放**在`.git/index`中
 >
@@ -163,11 +163,13 @@ $\Downarrow$	`git add <file> / *.txt / .` 			$\Uparrow$	`git rm --cached <file>`
 
 $\Downarrow$ 	`git commit / -am "tip"`		( -a  将==已追踪==的文件从 <img src="./images/mac-pro.png"  alt="mac-pro" style="zoom: 25%;" /> $\Longrightarrow$<img src="./images/harddisk.png" alt="harddisk" style="zoom: 23%;" />)
 
-​						all message
+​						all [message](#message)		
 
 
 
-## **本地**仓库
+
+
+### **本地**仓库
 
 > <img src="./images/harddisk.png" alt="harddisk" style="zoom: 50%;" />Local Repository
 >
@@ -186,6 +188,20 @@ $\Downarrow$ 	`git commit / -am "tip"`		( -a  将==已追踪==的文件从 <img 
 > > 嘿，你现在正在 **主分支** 上工作，所有的操作都会影响这个 **主分支**(**指挥棒**)
 
 
+
+
+
+### Replenish
+
+
+
+###### <a id="message">-m</a>
+
+> **开头**以一条简短的（≤50个字符）描述变化，
+>
+> 然后是一条==空行==，
+>
+> 然后是**更详细**的描述。
 
 
 
@@ -362,7 +378,7 @@ diff --git a/3.txt b/3.txt      # 比较文件 `3.txt` 的两个版本
 index 55bd0ac..1e6fd03 100644   # 旧..新 文件权限(普通文件)
 --- a/3.txt                     # 旧版本
 +++ b/3.txt                     # 新版本
-@@ -1 +1 @@                     # 第1行被修改，修改前后仍然只有1行
+@@ -1,2 +1,3 @@                 # 旧文件(1-2行),新文件(1-3行)
 -333    # 旧版本内容
 +444    # 新版本内容
 ```
@@ -382,7 +398,7 @@ index 55bd0ac..1e6fd03 100644   # 旧..新 文件权限(普通文件)
 ### 暂存区<img src="./images/2024-08-22_14-52-37-removebg-preview.png" alt="2024-08-22_14-52-37-removebg-preview" style="zoom: 6%;" /> - 本地仓库<img src="./images/harddisk.png" alt="harddisk" style="zoom: 22%;" />
 
  ```bash
- git diff --cached	#已暂存
+ git diff --cached	#cached - 已暂存
  ```
 
 
@@ -925,8 +941,11 @@ git log --all --oneline --graph --decorate
 - 设置别名
 
   ```bash
+  .bashrc		-	run commands
+  
   alias graph="git log --all --oneline --graph --decorate"
-   别名
+  
+  source ~/.bashrc	-	读取并执行
   ```
 
 
@@ -1013,4 +1032,16 @@ git merge --abort
 
 ![Development Process](./images/Development Process.png)
 
-add
+
+
+
+
+****
+
+
+
+# Official documentation
+
+[Tutorial](https://git-scm.com/docs/gittutorial) -> [Everyday](https://git-scm.com/docs/giteveryday) -> [Documentation](https://git-scm.com/docs/git/en) -> [CLI](https://git-scm.com/docs/gitcli)
+
+> CLI	-	Command Line Interface	命令行界面
