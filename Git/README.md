@@ -1,4 +1,4 @@
-# Install
+# -Install
 
 ```bash
 apt install git
@@ -758,7 +758,7 @@ git pull <远程仓库名> < 远程分支名>:<本地分支名> --rebase
 ### 推送
 
 ```bash
-git push -u <远程仓库名> <本地分支名>
+git push <远程仓库名> <本地分支名>
 			  origin     main
 ```
 
@@ -772,7 +772,7 @@ git push -u <远程仓库名> <本地分支名>
 
 ```bash
 git commit --amend -m "……"		#amend - 修正
-git push origin main --force
+git push origin main -f
 ```
 
 ​	
