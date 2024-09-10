@@ -1129,7 +1129,35 @@ sudo apt install gitk
 
 
 
+### 比较
 
+
+
+#### 提交
+
+```bash
+gitk <ID₁> <ID₂>
+```
+
+
+
+#### 与`FETCH_HEAD`比较
+
+
+
+##### ..
+
+```bash
+gitk HEAD..FETCH_HEAD
+```
+
+
+
+##### ...
+
+```bash
+gitk HEAD...FETCH_HEAD
+```
 
 
 
