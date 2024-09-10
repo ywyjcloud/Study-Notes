@@ -964,7 +964,7 @@ git rebase Main			#当前 -> 目标分支
 
 
 
-###### 获取更新
+##### 获取更新
 
 ```bash
 git fetch <URL> <Remote branch name>
@@ -976,7 +976,7 @@ git fetch <URL> <Remote branch name>
 
 
 
-###### 查看具体的内容
+##### 查看具体的内容
 
 ```bash
 git show FETCH_HEAD			#提交日志及其更改
@@ -990,17 +990,33 @@ git log -p FETCH_HEAD		#当个提交的变更
 
 
 
-###### 比较差异
+##### 比较差异
+
+
+
+###### diff
 
 ```bash
-git log -p HEAD..FETCH_HEAD	  #比较本地仓库的HEAD 与 FETCH_HEAD 的内容
+git diff HEAD..FETCH_HEAD
 ```
 
-- `-p` 显示具体的**文件改动**(patch)
+- 仅显示**内容**变化
 
 
 
-###### Prune - 删除
+###### log -p
+
+```bash
+git log -p HEAD..FETCH_HEAD	 
+```
+
+- 提交日记及具体的**文件改动**(`-p` - patch)
+
+
+
+
+
+##### Prune - 删除
 
 ```bash
 git fetch --prune
@@ -1022,7 +1038,7 @@ git log --all --oneline --graph --decorate
 - 设置别名
 
   ```bash
-  .bashrc		-	run commands
+  .bashrc		-	.bash run commands
   
   alias graph="git log --all --oneline --graph --decorate"
   
@@ -1105,7 +1121,23 @@ git merge --abort
 
 
 
+# Gitk
 
+```bash
+sudo apt install gitk
+```
+
+
+
+
+
+
+
+
+
+
+
+****
 
 
 
