@@ -424,6 +424,14 @@ index 55bd0ac..1e6fd03 100644   # 旧..新 文件权限(普通文件)
 
 
 
+### 本地仓库<img src="./images/harddisk.png" alt="harddisk" style="zoom: 22%;" /> - 远程仓库<img src="./images/Github.png" alt="Github" style="zoom: 10%;" />
+
+```bash
+git diff origin/main main
+```
+
+
+
 
 
 ## **<img src="./images/Different versions.png" align="left" alt="Different versions" style="zoom:33%;" />版本**
@@ -772,7 +780,7 @@ git branch -M main
 
 
 
-### 拉取
+### Pull - 拉取
 
 ```bash
 git pull <远程仓库名> < 远程分支名>:<本地分支名> --rebase	
@@ -790,14 +798,16 @@ git pull <远程仓库名> < 远程分支名>:<本地分支名> --rebase
 
 
 
-### 推送
+### Push - 推送
 
 ```bash
-git push <远程仓库名> <本地分支名>
+git push -u <远程仓库名> <本地分支名>
 			  origin     main
 ```
 
-- `-u`	-	upstream branch(上游分支)
+- `-u` - 设置上游分支 (upstream branch)
+
+  > 之后可直接使用 `git push` || `git pull`
 
 
 
@@ -854,7 +864,7 @@ git branch <branch_name>
 
 
 
-### 删除
+### -d - 删除
 
 ```bash
 git branch -d <branch_name>
@@ -865,7 +875,7 @@ git branch -d <branch_name>
 
 
 
-### 切换
+### Switch - 切换
 
 #### M_1
 
@@ -950,15 +960,33 @@ git rebase Main			#当前 -> 目标分支
 
 ### Fetch - 获取
 
+> 获取最新的货物清单，但不立刻卸货
+
 
 
 ###### 获取更新
 
 ```bash
-git fetch <URL> "Remote branch name"
+git fetch <URL> <Remote branch name>
 ```
 
 - 并不会自动整合到**本地仓库**<img src="./images/harddisk.png" alt="harddisk" style="zoom: 25%;" />
+
+
+
+
+
+###### 查看具体的内容
+
+```bash
+git show FETCH_HEAD			#提交日志及其更改
+
+git log -p FETCH_HEAD		#当个提交的变更
+```
+
+
+
+
 
 
 
@@ -972,7 +1000,19 @@ git log -p HEAD..FETCH_HEAD	  #比较本地仓库的HEAD 与 FETCH_HEAD 的内�
 
 
 
-### 查看分支
+###### Prune - 删除
+
+```bash
+git fetch --prune
+```
+
+- prune - 精简;修剪(树枝的枝叶)
+
+
+
+
+
+### Graph - 查看分支
 
 ```bash
 git log --all --oneline --graph --decorate
@@ -993,7 +1033,7 @@ git log --all --oneline --graph --decorate
 
 
 
-### 回退
+### Reset - 回退
 
 ```bash
 git reset {--hard} <ID>
