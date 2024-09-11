@@ -1,4 +1,4 @@
-# -Install
+# Install
 
 ```bash
 apt install git
@@ -131,7 +131,7 @@ git clone <url>
 
 ### **工作**区
 
-> <img src="./images/mac-pro.png" align="left" alt="mac-pro" style="zoom: 67%;" />Working Directory	
+> <img src="./images/mac-pro.png" align="left" alt="mac-pro" style="zoom: 40%;" />Working Directory	
 >
 > 
 >
@@ -147,7 +147,7 @@ $\Downarrow$	`git add <file> / *.txt / .` 			$\Uparrow$	`git rm --cached <file>`
 
 ### **暂存**区
 
-><img src="./images/2024-08-22_14-52-37-removebg-preview.png" alt="2024-08-22_14-52-37-removebg-preview" style="zoom: 25%;" />Staging Area / Index(索引)		一般**存放**在`.git/index`中
+><img src="./images/2024-08-22_14-52-37-removebg-preview.png" alt="2024-08-22_14-52-37-removebg-preview" style="zoom: 15%;" />Staging Area / Index(索引)		一般**存放**在`.git/index`中
 >
 >
 >
@@ -171,7 +171,7 @@ $\Downarrow$ 	`git commit / -am "tip"`		( -a  将==已追踪==的文件从 <img 
 
 ### **本地**仓库
 
-> <img src="./images/harddisk.png" alt="harddisk" style="zoom: 50%;" />Local Repository
+> <img src="./images/harddisk.png" alt="harddisk" style="zoom: 40%;" />Local Repository
 >
 > > 通过 `git init` 创建的仓库，存放项目 **版本信息** 和 **代码历史**
 
@@ -181,7 +181,7 @@ $\Downarrow$ 	`git commit / -am "tip"`		( -a  将==已追踪==的文件从 <img 
 
 `git log`	/	`git log --oneline`(一行精简显示)			查看提交**日志**
 
-> <img src="./images/Clip_2024-08-22_21-10-38.png" align="left" alt="Clip_2024-08-22_21-10-38" style="zoom: 80%;" />
+> <img src="./images/Clip_2024-08-22_21-10-38.png" align="left" alt="Clip_2024-08-22_21-10-38" style="zoom: 50%;" />
 >
 > > 头文件/当前指针	$\longrightarrow$ 	主分支
 > >
@@ -244,7 +244,7 @@ git log --stat --summaty	#了解提交影响及其变化概括
 git status {-s}		# s - short
 ```
 
-> <img src="./images/Clip_2024-08-29_18-01-24.png" align=left alt="Clip_2024-08-29_18-01-24" style="zoom: 67%;" />
+> <img src="./images/Clip_2024-08-29_18-01-24.png" align=left alt="Clip_2024-08-29_18-01-24" style="zoom: 50%;" />
 >
 > 
 >
@@ -268,11 +268,9 @@ git status {-s}		# s - short
 
 
 
-## 未跟踪
+### Untrack - 未跟踪
 
-> Untrack
->
-> >新创建，未被Git管理
+> 新创建，未被Git管理
 
 
 
@@ -280,11 +278,9 @@ $\Downarrow$ 	`git add .`
 
 
 
-## 未修改
+### Unmodified - 未修改
 
-> Unmodified
->
-> > 已被Git管理，但未修改
+> 已管理，未修改
 
 
 
@@ -292,11 +288,9 @@ $\Downarrow$
 
 
 
-## 已修改
+### Modified -  已修改
 
-> Modified
->
-> > 已修改，但未添加到**暂存区**
+> 已修改，但未添加到**暂存区**
 
 
 
@@ -304,11 +298,9 @@ $\Downarrow$
 
 
 
-## 已暂存
+### Staged - 已暂存
 
-> Staged
->
-> > 修改后，添加已到**暂存区**
+> 修改后，添加已到**暂存区**
 
 
 
@@ -318,58 +310,39 @@ $\Downarrow$
 
 
 
-# Rollback
+
+
+# 恢复
+
+> `HEAD^`表示**上一个版本**
 
 
 
+### Revert - 还原
 
-> git **reset**  --soft / hard / mixed	HEAD^
->
-> ​	重置							上一个版本
+```bash
+git revert <ID>
+```
 
-
-
-## soft
-
-> 退回来，文件依旧被 **追踪**(<img src="./images/2024-08-22_14-52-37-removebg-preview.png" alt="2024-08-22_14-52-37-removebg-preview" style="zoom: 20%;" />)
-
-
-
-
-
-
-
-## mixed
-
-> 默认
-
-退回来，**不**跟踪(<img src="./images/2024-08-23_23-09-32-removebg-preview.png" alt="2024-08-23_23-09-32-removebg-preview" style="zoom:25%;" />)
+- 创建一个新的**提交**来回退
 
 
 
 
 
+### Reset - 回退
+
+```bash
+git reset --soft / --mixed / --hard <ID>
+```
+
+- `soft`    -    所有修改仍会保留
+- `mixed`  -    退回这来，不追踪(默认)
+- `hard`    -    会删除后面的提交跟修改，**彻底回退**
 
 
-## hard
-
-> **完全**回退，包括各状态更改都会被删除<img src="./images/quanshanle .png"    alt="quanshanle " style="zoom: 33%;" />
 
 
-
-
-
-
-
-## 回溯
-
-> `git reflog`
->
-> > reference log	参看日志	可以理解为**监控**
-
-用`git reset --hard <ID>` 回退到这个版本
-
-> 工作区<img src="./images/mac-pro.png" align="left" alt="mac-pro" style="zoom: 25%;" />跟仓库<img src="./images/harddisk.png" alt="harddisk" style="zoom: 25%;" />全部退回来
 
 
 
@@ -1049,16 +1022,6 @@ git log --all --oneline --graph --decorate
 
 
 
-### Reset - 回退
-
-```bash
-git reset {--hard} <ID>
-	 回退
-```
-
-
-
-
 
 ****
 
@@ -1151,6 +1114,8 @@ gitk <ID₁> <ID₂>
 gitk HEAD..FETCH_HEAD
 ```
 
+- 比较差异
+
 
 
 ##### ...
@@ -1159,6 +1124,7 @@ gitk HEAD..FETCH_HEAD
 gitk HEAD...FETCH_HEAD
 ```
 
+- 共同祖先到各自的差异
 
 
 
