@@ -203,9 +203,19 @@ $\Downarrow$ 	`git commit / -am "tip"`		( -a  将==已追踪==的文件从 <img 
 >
 > 然后是**更详细**的描述。
 
+###### 多行备注
+
+```bash
+git commit -m "First line" -m "" -m "Third line"
+```
 
 
-##### 查看内容
+
+
+
+
+
+### 查看内容
 
 
 
@@ -213,9 +223,15 @@ $\Downarrow$ 	`git commit / -am "tip"`		( -a  将==已追踪==的文件从 <img 
 
 ```bash
 git show <ID>
+git show <Branch_name>
+
+#HEAD
+git show HEAD^				#parent
+git show HEAD^^				#grandparent
+git show HEAD~4				#great-great grandparent
 ```
 
-​	
+​		
 
 ###### 所有
 
@@ -792,7 +808,6 @@ git push -u <远程仓库名> <本地分支名>
 
 ```bash
 git commit --amend -m "……"		#amend - 修正
-git push origin main -f
 ```
 
 ​	
@@ -973,8 +988,6 @@ git fetch <URL> <Remote branch name>
 
 ```bash
 git show FETCH_HEAD			#提交日志及其更改
-
-git log -p FETCH_HEAD		#当个提交的变更
 ```
 
 
@@ -1017,6 +1030,10 @@ git fetch --prune
 ```
 
 - prune - 精简;修剪(树枝的枝叶)
+
+
+
+查看内容
 
 
 
