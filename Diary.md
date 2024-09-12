@@ -316,3 +316,22 @@ It’s like the saying:”You can lead horse to water, but you can’t make it d
 ###### Septermber 9/11
 
 ​		There is no such thing ad a shortcut, everything is done slowly. Take every step in a down-to-earth manner. Every step you take counts.
+
+
+
+****
+
+
+
+###### Septermber 9/12
+
+​	The Pomodora Technique is really necessary; it doesn’t limit us but rather enables us to learn more persistently while reducing harmful factors, such ad prolonged sitting, eye strain, and hearing loss. I only need to focus on tasks that can be completed within 25 minutes.
+
+​	I feel that Alfred Adler’s influence on his individual psychology is immense, providing a new perspective on viewing the world.
+
+​	Do Not Go Gentle into Thar Good Night.
+
+
+
+****
+
