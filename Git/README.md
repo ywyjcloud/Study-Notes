@@ -1,4 +1,4 @@
-# Install
+#  Install
 
 ```bash
 apt install git
@@ -730,6 +730,8 @@ git remote add origin <url>			#设置别名为origin
 
 
 
+
+
 ###### Replenish
 
 ```bash
@@ -809,13 +811,27 @@ git push origin main -f
 
 
 
-### 查看所有
+### 列出分支
+
+
+
+###### 本地
 
 ```bash
 git branch
 ```
 
-- \*  当前分支	 ![Clip_2024-09-07_14-18-46](./images/Clip_2024-09-07_14-18-46.png)
+- \*  当前分支	 <img src="./images/Clip_2024-09-07_14-18-46.png" alt="Clip_2024-09-07_14-18-46" style="zoom:50%;" />
+
+
+
+###### 远程
+
+```bash
+git branch -r
+```
+
+- `-r`	remote branch
 
 
 
@@ -914,12 +930,16 @@ git merge <branch_name>
 git rebase <branch_name>
 ```
 
+> <img src="./images/Clip_2024-09-12_08-46-19.png" align="left" alt="Clip_2024-09-12_08-46-19" style="zoom:50%;" />
+>
+> - refs - references(参考文献)
+
 
 
 
 
 ```bash
-* Feature
+* Feature	
 git rebase Main			#当前 -> 目标分支
 ```
 
@@ -970,7 +990,7 @@ git log -p FETCH_HEAD		#当个提交的变更
 ###### diff
 
 ```bash
-git diff HEAD..FETCH_HEAD
+git diff HEAD..FETCH_HEAD		
 ```
 
 - 仅显示**内容**变化
@@ -980,10 +1000,11 @@ git diff HEAD..FETCH_HEAD
 ###### log -p
 
 ```bash
-git log -p HEAD..FETCH_HEAD	 
+git log -p HEAD..FETCH_HEAD	 	#显示FETCH_HEAD的改动
 ```
 
 - 提交日记及具体的**文件改动**(`-p` - patch)
+- `..` $\Longrightarrow$ `...`        从**共同祖先**到各自的差异
 
 
 

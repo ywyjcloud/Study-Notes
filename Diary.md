@@ -306,3 +306,13 @@ It’s like the saying:”You can lead horse to water, but you can’t make it d
 ###### Septrmber 7, 2024
 
   The most effective learning method is to follow along with videos while taking notes.
+
+
+
+****
+
+
+
+###### Septermber 9/11
+
+​		There is no such thing ad a shortcut, everything is done slowly. Take every step in a down-to-earth manner. Every step you take counts.
