@@ -215,7 +215,11 @@ git commit -m "First line" -m "" -m "Third line"
 
 
 
-### 查看内容
+### 提交
+
+
+
+#### 查看
 
 
 
@@ -224,19 +228,35 @@ git commit -m "First line" -m "" -m "Third line"
 ```bash
 git show <ID>
 git show <Branch_name>
+```
 
-#HEAD
+​	
+
+###### 单个父
+
+```bash
 git show HEAD^				#parent
 git show HEAD^^				#grandparent
 git show HEAD~4				#great-great grandparent
 ```
 
-​		
+
+
+###### 多个父 - 合并提交
+
+```bash
+git show HEAD^1 	# 第1个父提交 = HEAD^
+git show HEAD^2 	# 第2个父提交
+```
+
+
+
+
 
 ###### 所有
 
 ```bash
-git log -p		#关注代码的的具体更改
+git log -p		#关注提交的代码的的具体更改
 
 p - patch(补丁)
 ```
@@ -247,6 +267,52 @@ p - patch(补丁)
 git log --stat --summaty	#了解提交影响及其变化概括
 		  统计     摘要
 ```
+
+
+
+
+
+###  Tag - 设置标签
+
+> 用于标记==特定的提交== ，用于**标识**发布的**版本** || 重要的**里程碑**
+
+
+
+#### 创建标签
+
+```bash
+git tag <version> <ID>		#后面可以使用标签代替<ID>
+```
+
+- <version> 通常是**版本号**，e.g. `1.0.0` - `主版本号.次版本.补丁号`
+
+
+
+
+
+##### 版本
+
+> `1.0.0-alpha`	`2.0.0-bata`	`3.0.0-rc1`
+
+
+
+###### alpha
+
+> 初步测试版本 ，功能未完善，可能存在很多的问题
+
+
+
+###### bata
+
+> 功能相对完善，但仍有可能存在问题
+
+
+
+###### rc
+
+> (Release Candidate) 候选版本，接近正式版，如果没有严重的BUG将作为正式版发布
+
+
 
 
 
@@ -325,6 +391,25 @@ $\Downarrow$
 ******
 
 
+
+# 搜索
+
+
+
+### 字符串
+
+```bash
+git grep "strings" <file.name>/<ID>	
+#省略后面的，则会搜索它所管理的当前目录中的任何文件
+```
+
+- `grep` - global regular exprssion print(全局正则表达式打印)
+
+  根据给定的==正则表达式==或==字符串模式==
+
+
+
+****
 
 
 
@@ -457,7 +542,7 @@ git diff <ID₁> <ID₂> <fileName>
 
 
 
-## <img src="./images/Branch.png" align="left" alt="Branch" style="zoom:33%;" />**分支**
+## <img src="./images/Branch.png" align="left" alt="Branch" style="zoom: 18%;" />**分支**
 
 ```bash
 git diff <branch_name> <branch_name>
@@ -471,9 +556,17 @@ git diff <branch_name> <branch_name>
 
 
 
-# Delete files
+# 文件操作
 
-### M_1
+
+
+### 删除
+
+
+
+
+
+#### M_1
 
 ```bash
 git rm <file.name>				# 工作区 ＆ 暂存区
@@ -486,12 +579,64 @@ git rm --catched <file.name> 	# 版本库
 
 
 
-### M_2
+#### M_2
 
 ```bash
 rm <file.name>
 git add <file.name> / .			#更新到 暂存区
 ```
+
+
+
+
+
+### 恢复
+
+
+
+#### 未提交时
+
+```bash
+git restore <file.name>
+	恢复
+```
+
+
+
+#### 已添加到暂存区
+
+```bash
+git restore  --staged <file.name>
+git restore <file.name>
+```
+
+
+
+
+
+#### 已提交
+
+
+
+##### 恢复到**工作目录**跟**暂存区**
+
+```bash
+git checkout <ID> -- <file.name>
+	检出
+```
+
+
+
+##### 恢复到工作目录
+
+```bash
+git restore --source=<ID> --staged --worktree <file.name>
+	恢复				       恢复
+```
+
+
+
+
 
 
 
@@ -859,12 +1004,18 @@ git branch -r
 ### 创建
 
 ```bash
-git branch <branch_name>
+git branch <branch_name> {<ID>}
 ```
 
-- e.g. 
-  - dev - development(开发)    开发的**主分支**
-  - feat - feature (特点)          开发**特定功能**
+- `<branch_name>`
+  - `dev`       development(开发)    开发的**主分支**
+  - `feat`      feature (特点)          开发**特定功能**
+  - `stable`   **稳定**分支，通常用于发布                             
+- `<ID>`    -    以其为基础
+
+
+
+
 
 
 
