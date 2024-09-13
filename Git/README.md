@@ -544,11 +544,53 @@ git diff <ID₁> <ID₂> <fileName>
 
 ## <img src="./images/Branch.png" align="left" alt="Branch" style="zoom: 18%;" />**分支**
 
+
+
+#### diff
+
 ```bash
-git diff <branch_name> <branch_name>
+git diff HEAD..FETCH_HEAD		
+```
+
+- 仅显示**内容**变化
+
+
+
+#### log
+
+
+
+```bash
+git log <ID₁>..<ID₂>	#between
+git log <ID₁>..			#从<ID₁>开始(不包括)，到当前分支
 ```
 
 
+
+##### 从某一时刻
+
+
+
+
+
+```bash
+$ git log v2.5..v2.6            # commits between v2.5 and v2.6
+$ git log v2.5..                # commits since v2.5
+$ git log --since="2 weeks ago" # commits from the last 2 weeks
+$ git log v2.5.. Makefile       # commits since v2.5 which modify
+				# Makefile
+```
+
+
+
+##### log -p
+
+```bash
+git log -p HEAD..FETCH_HEAD	 	#显示FETCH_HEAD的改动
+```
+
+- 提交日记及具体的**文件改动**(`-p` - patch)
+- `..` $\Longrightarrow$ `...`        从**共同祖先**到各自的差异
 
 
 
@@ -1145,35 +1187,6 @@ git show FETCH_HEAD			#提交日志及其更改
 
 
 
-
-
-##### 比较差异
-
-
-
-###### diff
-
-```bash
-git diff HEAD..FETCH_HEAD		
-```
-
-- 仅显示**内容**变化
-
-
-
-###### log -p
-
-```bash
-git log -p HEAD..FETCH_HEAD	 	#显示FETCH_HEAD的改动
-```
-
-- 提交日记及具体的**文件改动**(`-p` - patch)
-- `..` $\Longrightarrow$ `...`        从**共同祖先**到各自的差异
-
-
-
-
-
 ##### Prune - 删除
 
 ```bash
@@ -1181,10 +1194,6 @@ git fetch --prune
 ```
 
 - prune - 精简;修剪(树枝的枝叶)
-
-
-
-查看内容
 
 
 
