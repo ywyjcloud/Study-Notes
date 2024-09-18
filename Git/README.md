@@ -316,6 +316,18 @@ git tag <version> <ID>		#后面可以使用标签代替<ID>
 
 
 
+#### 提交的同时创建
+
+```bash
+git commit -m "Submit message" && git tag <version>
+```
+
+- `&&` **逻辑与**：前一个命令**成功执行后**，**才会执行**后一个
+
+
+
+
+
 ****
 
 
@@ -579,10 +591,13 @@ git log --since="2 weeks age"
 
 
 
+###### 只跟踪某一文件
+
 ```bash
-$ git log v2.5.. Makefile       # commits since v2.5 which modify
-				# Makefile
+git log <ID>..<FileName> 
 ```
+
+> 查看自<ID>以来，文件<FileName>的变更记录
 
 
 
