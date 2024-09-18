@@ -335,3 +335,8 @@ It’s like the saying:”You can lead horse to water, but you can’t make it d
 
 ****
 
+
+
+###### Septermber 9/18
+
+​	The first thing you need to do is try to figure out what are you capable of.

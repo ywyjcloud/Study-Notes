@@ -567,16 +567,19 @@ git log <ID₁>..			#从<ID₁>开始(不包括)，到当前分支
 
 
 
-##### 从某一时刻
+##### 自特定时间以来
 
-
+```bash
+git log --since="2 weeks age"
+			   ="1 hour age"
+			   ="1 hour 30minutes ago"
+			   ="1 day ago"		
+			   ="2024-09-19"
+```
 
 
 
 ```bash
-$ git log v2.5..v2.6            # commits between v2.5 and v2.6
-$ git log v2.5..                # commits since v2.5
-$ git log --since="2 weeks ago" # commits from the last 2 weeks
 $ git log v2.5.. Makefile       # commits since v2.5 which modify
 				# Makefile
 ```
