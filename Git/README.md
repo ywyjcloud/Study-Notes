@@ -568,47 +568,9 @@ git diff HEAD..FETCH_HEAD
 
 
 
-#### log
 
 
 
-```bash
-git log <ID₁>..<ID₂>	#between
-git log <ID₁>..			#从<ID₁>开始(不包括)，到当前分支
-```
-
-
-
-##### 自特定时间以来
-
-```bash
-git log --since="2 weeks age"
-			   ="1 hour age"
-			   ="1 hour 30minutes ago"
-			   ="1 day ago"		
-			   ="2024-09-19"
-```
-
-
-
-###### 只跟踪某一文件
-
-```bash
-git log <ID>..<FileName> 
-```
-
-> 查看自<ID>以来，文件<FileName>的变更记录
-
-
-
-##### log -p
-
-```bash
-git log -p HEAD..FETCH_HEAD	 	#显示FETCH_HEAD的改动
-```
-
-- 提交日记及具体的**文件改动**(`-p` - patch)
-- `..` $\Longrightarrow$ `...`        从**共同祖先**到各自的差异
 
 
 
@@ -1063,8 +1025,19 @@ git branch -r
 
 ### 创建
 
+#### 正常创建
+
 ```bash
-git branch <branch_name> {<ID>}
+git branch <Branch_Name>
+```
+
+
+
+#### 创建并切换
+
+```bash
+git checkout -b <Branch_Name> {<ID>}
+	切换		 branch
 ```
 
 - `<branch_name>`
@@ -1300,15 +1273,87 @@ git merge --abort
 
 
 
-# Gitk
+#  LOG & Gitk
+
+
+
+### log
+
+> 只能==顺序显示提交==，**分支分叉**和**合并**时顺序可能**混乱**
+
+
 
 ```bash
-sudo apt install gitk
+git log <ID₁>..<ID₂>	#between
+git log <ID₁>..			#从<ID₁>开始(不包括)，到当前分支
 ```
 
 
 
-### 比较
+##### 自特定时间以来
+
+```bash
+git log --since="2 weeks age"
+			   ="1 hour age"
+			   ="1 hour 30minutes ago"
+			   ="1 day ago"		
+			   ="2024-09-19"
+```
+
+
+
+###### 只跟踪某一文件
+
+```bash
+git log <ID>..<FileName> 
+```
+
+> 查看自<ID>以来，文件<FileName>的变更记录
+
+
+
+
+
+##### 一个分支相对另一个分支的新提交
+
+```bash
+git log <基准分支>..<目标分支>
+```
+
+- 显示**目标分支**中有但**基准分支**中没有的==提交==
+
+
+
+
+
+##### log -p
+
+```bash
+git log -p HEAD..FETCH_HEAD	 	#显示FETCH_HEAD的改动
+```
+
+- 提交日记及具体的**文件改动**(`-p` - patch)
+- `..` $\Longrightarrow$ `...`        从**共同祖先**到各自的差异
+
+
+
+
+
+
+
+
+
+
+
+浏览
+
+
+
+
+
+### Gitk
+
+> sudo apt install gitk
 
 
 
