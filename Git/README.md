@@ -520,7 +520,7 @@ git diff origin/main main
 
 
 
-## **<img src="./images/Different versions.png" align="left" alt="Different versions" style="zoom:33%;" />版本**
+## **<img src="./images/Different versions.png" align="left" alt="Different versions" style="zoom: 20%;" />版本**
 
 
 
@@ -554,11 +554,139 @@ git diff <ID₁> <ID₂> <fileName>
 
 
 
-## <img src="./images/Branch.png" align="left" alt="Branch" style="zoom: 18%;" />**分支**
+****
 
 
 
-#### diff
+#  LOG & Gitk & Diff
+
+
+
+### log
+
+> 只能==顺序显示提交==，**分支分叉**和**合并**时顺序可能**混乱**
+
+
+
+```bash
+git log <ID₁>..<ID₂>	#between
+git log <ID₁>..			#从<ID₁>开始(不包括)，到当前分支
+```
+
+
+
+##### 自特定时间以来
+
+```bash
+git log --since="2 weeks age"
+			   ="1 hour age"
+			   ="1 hour 30minutes ago"
+			   ="1 day ago"		
+			   ="2024-09-19"
+```
+
+
+
+###### 只跟踪某一文件
+
+```bash
+git log <ID>..<FileName> 
+```
+
+> 查看自<ID>以来，文件<FileName>的变更记录
+
+
+
+
+
+##### 一个分支相对另一个分支的新提交
+
+```bash
+git log <基准分支>..<目标分支>
+```
+
+- 显示**目标分支**中有但**基准分支**中没有的==提交==
+
+
+
+
+
+##### log -p
+
+```bash
+git log -p HEAD..FETCH_HEAD	 	#显示FETCH_HEAD的改动
+```
+
+- 提交日记及具体的**文件改动**(`-p` - patch)
+- `..` $\Longrightarrow$ `...`        从**共同祖先**到各自的差异
+
+
+
+
+
+
+
+### gitk
+
+> ```bash
+> sudo apt install gitk
+> ```
+>
+> 在==可视化历史==方面更好
+
+
+
+#### 比较提交
+
+```bash
+gitk <ID₁> <ID₂>
+```
+
+
+
+#### 与`FETCH_HEAD`比较
+
+
+
+##### ..
+
+```bash
+gitk HEAD..FETCH_HEAD
+```
+
+- 比较差异
+
+
+
+##### ...
+
+```bash
+gitk HEAD...FETCH_HEAD
+```
+
+- 共同祖先到各自的差异
+
+
+
+
+
+#### 指定==目录==&==时间==
+
+```bash
+gitk --since ="2 weeks age"	<Directory_Name>/
+			 ="1 hour age"
+			 ="1 hour 30minutes ago"
+			 ="1 day ago"		
+		     ="2024-09-19"
+```
+
+
+
+
+
+### diff
+
+ 
 
 ```bash
 git diff HEAD..FETCH_HEAD		
@@ -568,7 +696,13 @@ git diff HEAD..FETCH_HEAD
 
 
 
+#### 比较==两个==文件的==不同版本==
 
+```bash
+git diff <ID¹>:<File.Name¹> <ID²>:<File.Name²>
+```
+
+- 比较<u>同一文件</u>或<u>不同文件</u>在**不同版本中**的差异
 
 
 
@@ -1273,126 +1407,7 @@ git merge --abort
 
 
 
-#  LOG & Gitk
 
-
-
-### log
-
-> 只能==顺序显示提交==，**分支分叉**和**合并**时顺序可能**混乱**
-
-
-
-```bash
-git log <ID₁>..<ID₂>	#between
-git log <ID₁>..			#从<ID₁>开始(不包括)，到当前分支
-```
-
-
-
-##### 自特定时间以来
-
-```bash
-git log --since="2 weeks age"
-			   ="1 hour age"
-			   ="1 hour 30minutes ago"
-			   ="1 day ago"		
-			   ="2024-09-19"
-```
-
-
-
-###### 只跟踪某一文件
-
-```bash
-git log <ID>..<FileName> 
-```
-
-> 查看自<ID>以来，文件<FileName>的变更记录
-
-
-
-
-
-##### 一个分支相对另一个分支的新提交
-
-```bash
-git log <基准分支>..<目标分支>
-```
-
-- 显示**目标分支**中有但**基准分支**中没有的==提交==
-
-
-
-
-
-##### log -p
-
-```bash
-git log -p HEAD..FETCH_HEAD	 	#显示FETCH_HEAD的改动
-```
-
-- 提交日记及具体的**文件改动**(`-p` - patch)
-- `..` $\Longrightarrow$ `...`        从**共同祖先**到各自的差异
-
-
-
-
-
-
-
-
-
-
-
-浏览
-
-
-
-
-
-### Gitk
-
-> sudo apt install gitk
-
-
-
-#### 提交
-
-```bash
-gitk <ID₁> <ID₂>
-```
-
-
-
-#### 与`FETCH_HEAD`比较
-
-
-
-##### ..
-
-```bash
-gitk HEAD..FETCH_HEAD
-```
-
-- 比较差异
-
-
-
-##### ...
-
-```bash
-gitk HEAD...FETCH_HEAD
-```
-
-- 共同祖先到各自的差异
-
-
-
-
-
-
-****
 
 
 

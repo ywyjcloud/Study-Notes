@@ -323,7 +323,7 @@ It’s like the saying:”You can lead horse to water, but you can’t make it d
 
 
 
-###### Septermber 9/12
+###### September 9/12
 
 ​	The Pomodora Technique is really necessary; it doesn’t limit us but rather enables us to learn more persistently while reducing harmful factors, such ad prolonged sitting, eye strain, and hearing loss. I only need to focus on tasks that can be completed within 25 minutes.
 
@@ -337,6 +337,20 @@ It’s like the saying:”You can lead horse to water, but you can’t make it d
 
 
 
-###### Septermber 9/18
+###### September 9/18
 
 ​	The first thing you need to do is try to figure out what are you capable of.
+
+
+
+****
+
+
+
+###### September 9/19
+
+​	The sudden realization of how low my productivity actually is hits me. It fells like I’ve been immersed in a sense of being productive, but in reality, it’s not the case. Now reflecting on the day: I started as usual with my English studies, followed by learing a bit of Git syntax. Then I listend to an audiobook, watched some videos, taought my girlfriend some Python, and spent some time on various small, miscellaneous tasks. It feels like I’ve been immersed in this state for quite a long time. After finishing my English study, the time I actully spend on computer science has been very little, and even that time is quite unproductive. I actually became aware of this state a long time ago, but I subconsciously ignored it. Now, I want to address ang resolve it. I know that if I leave it unchecked, it’ll end up like when I tried to self-study high shool math-learning very little in the end. I still believe in that saying: when you know exactly where the problem lies, you’ve already solved half of it. The rest is simply about continuously improving and iterating on the foundation you’ve built. This also means that the beginning doesn’t have to be spectaculat---What matters most is taking action.
+
+​	First and foremost, it’s definitely worth acknowledging that I’ve come to solid realization: the break time during a Pomadora session is actually meant to help me have more energy for the next round, rather than being a waste of time. On the contrary, it provides me with better focus and energy to face both life and learning.
+
+​	I want to make my tasks more concrete, similar to how I approache English learning--having something speciic and actionable waiting to be done. It’s truly a great feeling, as it allows me to facus on what needs to be completed reather than being overwhelmed by an endless list of tasks.
