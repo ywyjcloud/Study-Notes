@@ -215,39 +215,6 @@ git commit -m "First line" -m "" -m "Third line"
 
 
 
-### 提交
-
-
-
-#### 查看
-
-
-
-###### 指定
-
-```bash
-git show <ID>
-git show <Branch_name>
-```
-
-​	
-
-###### 单个父
-
-```bash
-git show HEAD^				#parent
-git show HEAD^^				#grandparent
-git show HEAD~4				#great-great grandparent
-```
-
-
-
-###### 多个父 - 合并提交
-
-```bash
-git show HEAD^1 	# 第1个父提交 = HEAD^
-git show HEAD^2 	# 第2个父提交
-```
 
 
 
@@ -558,7 +525,7 @@ git diff <ID₁> <ID₂> <fileName>
 
 
 
-#  LOG & Gitk & Diff
+#  LOG Gitk Diff Show
 
 
 
@@ -707,6 +674,46 @@ git diff <ID¹>:<File.Name¹> <ID²>:<File.Name²>
 
 
 
+
+
+
+### show
+
+
+
+##### 指定
+
+```bash
+git show <ID>
+git show <Branch_name>
+```
+
+​	
+
+##### 指定文件指定版本
+
+```bash
+git show <ID>:<File.Name>
+```
+
+
+
+##### **单个**父提交
+
+```bash
+git show HEAD^				#parent
+git show HEAD^^				#grandparent
+git show HEAD~4				#great-great grandparent
+```
+
+
+
+##### **多个**父提交 - 合并提交
+
+```bash
+git show HEAD^1 	# 第1个父提交 = HEAD^
+git show HEAD^2 	# 第2个父提交
+```
 
 ****
 
