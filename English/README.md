@@ -1,4 +1,78 @@
-# 动词
+
+
+# Rachels English
+
+> Build English thinking instead of translation thinking 
+>
+> 
+>
+> Keep track so you’re doing it every day 
+
+
+
+### Learning methods
+
+Start with the simplest nouns around you. Only by doing so can you have context.
+
+$\darr$
+
+Think in simple sentences while remembering phrases
+
+- Learing in contxt is very helpful
+
+
+
+$\darr$ 
+
+
+
+Change one of your everyday life things to English 
+
+
+
+
+
+#### When learning words
+
+1. Describe in simple words
+2. Make a simple sentence
+3. Hava a short conversation with yourself in English 
+
+
+
+#### Suggestion
+
+- Spend ==two== minutes each day having a simple conversation with yourself.
+
+  > <font color=#1D3AF5>Just thinking not speaking out loud</font>
+  >
+  > 
+  >
+  > It can be a plan after getting up
+
+
+
+### Recommend
+
+
+
+ [YouGlish](https://youglish.com/)<img src="./images/3db76dca-283e-4f3b-960c-0af4147bf045.png" align="left" alt="3db76dca-283e-4f3b-960c-0af4147bf045" />
+
+> Pronunciation in real-life contxts
+
+
+
+
+
+<img src="./images/333c87c5-8eeb-41aa-bc09-c4741491dc63.png" align="left" alt="333c87c5-8eeb-41aa-bc09-c4741491dc63" style="zoom: 50%;" />[Merriam-Webster](https://www.merriam-webster.com/)
+
+> Its English explanations and daily words are very useful.
+
+
+
+
+
+#  动词
 
 ## vt
 
