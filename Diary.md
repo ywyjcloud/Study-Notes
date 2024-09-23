@@ -368,3 +368,15 @@ It’s like the saying:”You can lead horse to water, but you can’t make it d
 ​	Honestly, it’s that I can truly feel my own growth as I’m constantly making progress. I’ve relized that when we really slow down and focus on one thing, it’s just like Adler said: we’re not climbing a mountain but moving forward on a flat plane. All progress and changes are simply us advancing on this plane, with no real sense of up or down. I truly feel fortunate to have come to understand Adler’s thoughts on the world, allowing me to stay more composed. Honedtly, everything has changed so quickly. From being a congfused and ignorant child to where I am now, it has only been a year. In this year, I’ve relized that many of my past thoughts
 
 were wrong, and those worries have simply faded away. I truly feel a deep sense of gratitude. The most important thing is the demystification of those so-called “big shots”.
+
+
+
+****
+
+
+
+###### Septrmber 9/23
+
+​	It’s okay to start slow; as you keep going, you’ll gradually pick up speed. I’ve truly realized the benefits of taking notes. Not only does it help organize my thoughts, but when I suddenly recall something from the past, the memories flood back like a torrent, saving me a lot of time and effort. Be the way, I’ve really come to relize that separating topics is very important. It can greatly reduce the burden on my mind. I truly want to express my gratitude for Adler’s thoughts. It seems that  
+
+when it comes to cultivating my relationship with my girlfriend, I should listen more---listen to her thoughts rather than just expressing my own views.
