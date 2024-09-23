@@ -2,13 +2,18 @@
 
 GNU Compiler Collection
 
-在许多 Linux 系统中，GCC 是预装的。如果你使用的是较新版本的 Linux 系统，可能需要手动安装。在 Ubuntu 系统上，安装 GCC 非常简单，只需运行以下命令：
+> GNU’s Not Unix编辑器集合
+
+
 
 ```bash
 sudo apt install gcc g++
 ```
 
-GCC 用于编译 C 语言，G++ 用于编译 C++ 语言。安装完成后，可以通过以下命令验证安装是否成功：
+- gcc 编译C
+- g++ 编译C++
+
+
 
 ```bash
 gcc --version
@@ -28,35 +33,27 @@ MinGW（Minimalist GNU for Windows），一个适用于 Windows 的极简 GNU �
 
 
 
-1. 打开命令行窗口，输入以下命令验证安装是否成功：
+
+
+
 
 ```bash
-gcc --version
+gcc <File.Name> 
+
+gcc -o <Out.Name> <File.Name>  	#指定输出文件名
+     output
 ```
 
-## 3. 编译单个文件
 
-### C 文件编译
-
-1. 准备一个 C 源文件（例如 `hello.c`）。
-2. 在命令行中，输入以下命令编译 C 文件：
-
-```bash
-gcc hello.c
-```
-
-3. 默认情况下，生成的可执行文件名为 `a.exe`（在 Linux 下为 `a.out`）。运行可执行文件：
 
 ```bash
 ./a.exe  # Windows
 ./a.out  # Linux
 ```
 
-4. 如果希望指定输出文件名，可以使用 `-o` 选项：
 
-```bash
-gcc -o hello hello.c
-```
+
+
 
 ### C++ 文件编译
 
