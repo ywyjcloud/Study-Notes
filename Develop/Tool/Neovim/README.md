@@ -1109,88 +1109,8 @@ rm -rf ~/.cache/nvim		--	缓存文件(cache)
 
 
 
-### <img src="./images/lazy.nvim logo.png" align="left" alt="lazy.nvim logo" style="zoom:50%;" />[lazy.vim](https://www.lazyvim.org/)
 
 
-
-#### 清除||备份
-
-```bash
-rm -rf ~/.config/nivm			#自定义配置&插件配置
-rm -rf ~/.local/share/nvim		#下载的插件&扩展
-rm -rf ~/.local/state/nivm		#会话&历史记录		
-rm -rf ~/.cache/nvim			#临时存储文件&加快启动速度
-```
-
-
-
-#### 安装推荐的==依赖项==
-
-
-
-##### <img src="./images/Lazygit.png" alt="Lazygit" align="left" style="zoom: 5%;" />[lazygit](https://github.com/jesseduffield/lazygit?tab=readme-ov-file)
-
-> Simple terminal UI for git commands
-
-
-
-###### Install
-
-```bash
-LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
-curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
-tar xf lazygit.tar.gz lazygit
-sudo install lazygit /usr/local/bin
-```
-
-
-
-```bash
-lazygit --version
-```
-
-
-
-
-
-##### Ripgrep
-
-> 超快速**文本**搜索工具，且默认遵守`.gitignore`
-
-
-
-###### Install
-
-```bash
-curl -LO https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep_14.1.0-1_amd64.deb
-sudo dpkg -i ripgrep_14.1.0-1_amd64.deb
-```
-
-
-
-```bash
-rg --version
-```
-
-
-
-##### fd
-
-> **文件**查找工具，有比find更易用的语法
-
-
-
-###### Install
-
-```bash
-apt install fd-find
-```
-
-
-
-```bash
-fdfind --version
-```
 
 
 
@@ -1288,29 +1208,7 @@ mkdir -p
 
 
 
-###### 透明
 
-- vim.cmd('highlight Normal guibg=none')      -- 设置 Normal 模式的背景为透明
-  vim.cmd('highlight SignColumn guibg=none')  -- 设置 SignColumn 的背景为透明
-  vim.cmd('highlight VertSplit guibg=none')   -- 设置 VertSplit 的背景为透明
-  vim.cmd('highlight FoldColumn guibg=none')  -- 设置 FoldColumn 的背景为透明
-  vim.cmd('highlight StatusLine guibg=none')  -- 设置 StatusLine 的背景为透明
-  vim.cmd('highlight StatusLineNC guibg=none')-- 设置 StatusLineNC 的背景为透明
-  vim.cmd('highlight Normal guifg=#FFAFD2')   -- 设置 Normal 模式的前景色为粉红色
-  vim.cmd('highlight LineNr guifg=#BC93FF')   -- 设置行号的前景色为紫色
-  vim.cmd('highlight StatusLine guifg=#94FFA2')-- 设置活动状态栏的前景色为绿色
-  vim.cmd('highlight StatusLineNC guifg=#94FFA2')-- 设置非活动状态栏的前景色为绿色
-  
-  -- 设置 INSERT 模式的颜色为 #94FFA2
-  vim.cmd('autocmd VimEnter,InsertEnter * highlight ModeMsg guifg=#94FFA2 ctermfg=LightGreen')
-  
-  - cmd（直接输入给**编辑器**就是进行**修改**）
-  - highlight（设置**文本**的**显示属性**）
-  - `guifg`(foreground color)-**前景**颜色    ->    用于**GUI**（**图形**用户界面）模式
-
-
-
-- vvim.cmd('set winblend=10')                  -- 设置窗口混合度为10，使窗口略显透明
 
 
 
@@ -2973,3 +2871,143 @@ Ex 模式下通过输入 `:`  **开始**的命令来执行各种 **编辑** 和 
 
 ![image-20240717030939731](./images/image-20240717030939731.png)
 
+
+
+
+
+
+
+****
+
+
+
+# 💤[Lazy.vim](https://www.lazyvim.org/)
+
+> 管理插件&更新
+>
+> 
+>
+> `Lazy.nivm`是它的一个插件
+
+
+
+## Configuration
+
+
+
+### 清除||备份
+
+```bash
+rm -rf ~/.config/nivm			#自定义配置&插件配置
+rm -rf ~/.local/share/nvim		#下载的插件&扩展
+rm -rf ~/.local/state/nivm		#会话&历史记录		
+rm -rf ~/.cache/nvim			#临时存储文件&加快启动速度
+```
+
+
+
+### 安装推荐的==依赖项==
+
+
+
+##### <img src="./images/Lazygit.png" alt="Lazygit" align="left" style="zoom: 5%;" />[lazygit](https://github.com/jesseduffield/lazygit?tab=readme-ov-file)
+
+> Simple terminal UI for git commands
+
+
+
+###### Install
+
+```bash
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit /usr/local/bin
+```
+
+
+
+```bash
+lazygit --version
+```
+
+
+
+
+
+
+##### Ripgrep
+
+> 超快速**文本**搜索工具，且默认遵守`.gitignore`
+
+
+
+###### Install
+
+```bash
+curl -LO https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep_14.1.0-1_amd64.deb
+sudo dpkg -i ripgrep_14.1.0-1_amd64.deb
+```
+
+
+
+```bash
+rg --version
+```
+
+
+
+##### fd
+
+> **文件**查找工具，有比find更易用的语法
+
+
+
+###### Install
+
+```bash
+apt install fd-find
+```
+
+
+
+```bash
+fdfind --version
+```
+
+
+
+
+
+## Use Starter Repo
+
+```bash
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
+```
+
+
+
+#### Doshboard
+
+
+
+##### `nvim`
+
+<img src="./images/Clip_2024-09-23_18-41-43.png" alt="Clip_2024-09-23_18-41-43" align="left" style="zoom:33%;" />
+
+
+
+##### Plugin manager
+
+
+
+###### Srart up
+
+>   `nvim l`  ||  `<span> l`  ||  `:Lazy`
+
+<img src="./images/Clip_2024-09-23_23-19-56.png" alt="Clip_2024-09-23_23-19-56" style="zoom:80%;" />
+
+- `Sync(S)` - Synchronization同步
+
+  相当于同时运行**安装** 、**清理**、**更新**

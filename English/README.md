@@ -140,3 +140,16 @@ Change one of your everyday life things to English
 >
 > Because, when, if
 
+
+
+# Expand
+
+e.g.(例如)
+
+i.e.(即)
+
+N.B.(注意)
+
+etc.(等等)
+
+P.S.(附言)
