@@ -390,3 +390,5 @@ when it comes to cultivating my relationship with my girlfriend, I should listen
 ###### September 9/24
 
 ​	Practicing it makes it easeier.
+
+​	The improvement brought by directly incorporating English into my learning is truly significant. Nowadays, there’s really no need to repeatedly shout with a poor accent in an attempt to learn English well; that really is just wishful thinking. Integrating oneself into a larger community, rather than limiting oneself to being a specialist or focusing on age, doesn’t allow us to face a broader world. We need to relize that we are simply human-it’s as simple as that-whthout being defined by anything. We don’t need others’ evaluations; that only leads us to live according to their expectations. We are not in competition with eacho other; we are in a collaborative relationship. Everyone exists on the same plane-there is no competition, and all individuals are equal.
