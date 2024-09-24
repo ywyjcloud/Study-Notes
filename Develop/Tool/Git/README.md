@@ -16,25 +16,26 @@ apt install git
 
 # initialization
 
-设置 ==用户名== 和 ==邮箱==
+Set ==username==, ==useremail==, ==DefaoltBranchName== 
 
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email email@gmail.com
 git config --global credential.helper store
+git config --global init.defaultBranch main
 ```
 
-> global				在用户的 **所有Git操作** 中生效
+> global				Take effect in **all Git operations** of the user
 >
 > credential.helper	凭据助手
 >
 > store				 储存
 >
-> // 有**空格**需要用 `“”`
+> // If there are spaces, use `“”`
 
 
 
-查看信息
+View information 
 
 ```bash
 git config --global -l
@@ -1414,6 +1415,66 @@ git merge --abort
 
 
 
+# Dotfiles:Best way to store in a bare git repository
+
+```bash
+git init --bare $HOME/.cfg
+```
+
+> Used to track files
+
+- `.cfg`	$\Rarr$  `configuration`
+
+
+
+```bash
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+```
+
+> Usage examples	`config status`
+
+
+
+- `/usr/bin/git` 
+
+  > This sprcifies the path to the Git executable
+
+- `--git-dir=$HOME/.cfg`
+
+   > Use this directory as the metadata location 
+
+  - `dir`	$\Rarr$	`directory`
+
+- `--work tree=$HOME`
+
+  > Specify working directory
+
+
+
+```bash
+config config --local status.showUntrackedFiles no
+```
+
+> Not show untracked files when run `git status`
+
+
+
+```bash
+echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bashrc
+```
+
+> Append to `.bashrc` file
+
+
+
+
+
+
+
+
+
+****
+
 
 
 
@@ -1438,7 +1499,9 @@ git merge --abort
 
 
 
+###### Come and have a look when you have time
 
+[ATLASSIAN](https://www.atlassian.com/git/glossary#commands)
 
 
 

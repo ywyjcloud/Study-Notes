@@ -380,3 +380,13 @@ were wrong, and those worries have simply faded away. I truly feel a deep sense 
 ​	It’s okay to start slow; as you keep going, you’ll gradually pick up speed. I’ve truly realized the benefits of taking notes. Not only does it help organize my thoughts, but when I suddenly recall something from the past, the memories flood back like a torrent, saving me a lot of time and effort. Be the way, I’ve really come to relize that separating topics is very important. It can greatly reduce the burden on my mind. I truly want to express my gratitude for Adler’s thoughts. It seems that  
 
 when it comes to cultivating my relationship with my girlfriend, I should listen more---listen to her thoughts rather than just expressing my own views.
+
+
+
+****
+
+
+
+###### September 9/24
+
+​	Practicing it makes it easeier.
