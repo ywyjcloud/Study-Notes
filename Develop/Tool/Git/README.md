@@ -1417,6 +1417,12 @@ git merge --abort
 
 # Dotfiles:Best way to store in a bare git repository
 
+
+
+## Set
+
+
+
 ```bash
 git init --bare $HOME/.cfg
 ```
@@ -1431,9 +1437,17 @@ git init --bare $HOME/.cfg
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 ```
 
-> Usage examples	`config status`
-
-
+> Use `config` instead of `git`  	
+>
+> - e.g.
+>
+>   `config status`
+>
+>   `config add .vimrc`
+>
+>   `config commit -m "Add vimrc"`
+>
+>   `config push`
 
 - `/usr/bin/git` 
 
@@ -1468,6 +1482,10 @@ echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $H
 
 
 
+
+
+
+## Installing or Migrating 
 
 
 
